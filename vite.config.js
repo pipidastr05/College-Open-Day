@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  base:'/hangman-game/'
+  base:'/College-Open-Day/'
 })
