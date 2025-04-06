@@ -46,7 +46,7 @@
   }
   
   .button-primary {
-   @apply flex justify-center items-center bg-slate-200 dark:bg-indigo-500 enabled:dark:hover:bg-indigo-600 enabled:hover:bg-slate-300 rounded-md font-medium px-5 py-2 disabled:opacity-20 disabled:cursor-not-allowed; 
+   @apply flex justify-center items-center bg-[#88B75F] dark:bg-[#486D99] enabled:dark:hover:bg-indigo-600 enabled:hover:bg-slate-300 rounded-md font-medium px-5 py-2 disabled:opacity-20 disabled:cursor-not-allowed; 
   }
   .button-secondary {
     @apply border border-black rounded-md hover:bg-slate-100 dark:border-white dark:hover:bg-zinc-600;
@@ -57,11 +57,11 @@
   }
 
   .letter {
-    @apply mx-2 text-3xl font-medium;
+    @apply mx-2 text-xl font-medium;
   }
 
   .keyboard {
-    @apply max-w-2xl mt-5 flex justify-center flex-wrap;
+    @apply max-w-3xl mt-2 flex justify-center flex-wrap;
   }
 
   .keyboard-button {
@@ -69,7 +69,7 @@
   }
 
   .hangman-img {
-    @apply w-32 h-32 sm:w-60 sm:h-60;
+    @apply w-32 h-32 sm:w-40 sm:h-40;
   }
 
   .result-header {
