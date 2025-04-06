@@ -130,7 +130,7 @@ export const startGame = () => {
   gameDiv.innerHTML = createPlaceholdersHTML();
 
   gameDiv.innerHTML +=
-    '<p id="tries" class="mt-2">ПОПЫТОК: <span id="tries-left" class="font-medium text-red-600">10</span></p>';
+    '<p id="tries" class="mt-2">ПОПЫТОК ОСТАЛОСЬ: <span id="tries-left" class="font-medium text-red-600">10</span></p>';
 
   const keyboardDiv = createKeyboard();
   keyboardDiv.addEventListener("click", (event) => {
