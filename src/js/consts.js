@@ -1,3 +1,4 @@
-export const WORDS = ['code', 'frontend', 'programming']
+export const WORDS = ['алгоритм', 'разрабочик', 'программирование', 'программист', 'тестировщик',
+     'дизайнер', 'администратор', 'аналитик', 'авторизация', 'админ']
 
-export const KEYBOARD_LETTERS = Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+export const KEYBOARD_LETTERS = Array.from('АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ')

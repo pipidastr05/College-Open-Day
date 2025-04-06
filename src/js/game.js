@@ -100,11 +100,11 @@ const stopGame = (status) => {
     //сценарий выигрыша
     document.getElementById("hangman-img").src = "images/hg-win.png";
     document.getElementById("game").innerHTML +=
-      '<h2 class="result-header win">You won!</h2>';
+      '<h2 class="result-header win">Ты победил!</h2>';
   } else if (status === "lose") {
     //сценарий проигрыша
     document.getElementById("game").innerHTML +=
-      '<h2 class="result-header lose">You lost :(</h2>';
+      '<h2 class="result-header lose">Ты проиграл :(</h2>';
   } else if (status === "quit") {
     document.getElementById("hangman-img").remove();
     logoH1.classList.remove('logo-sm');
@@ -113,8 +113,8 @@ const stopGame = (status) => {
 
   document.getElementById(
     "game"
-  ).innerHTML += `<p>The word was: <span class="result-word">${word}</span></p>
-  <button id="play-again" class="button-primary px-5 py-2 mt-5">Play again</button>`;
+  ).innerHTML += `<p>Загаданное слово: <span class="result-word">${word}</span></p>
+  <button id="play-again" class="button-primary px-5 py-2 mt-5">Начать игру</button>`;
   document.getElementById("play-again").onclick = startGame;
 };
 
@@ -130,7 +130,7 @@ export const startGame = () => {
   gameDiv.innerHTML = createPlaceholdersHTML();
 
   gameDiv.innerHTML +=
-    '<p id="tries" class="mt-2">TRIES LEFT: <span id="tries-left" class="font-medium text-red-600">10</span></p>';
+    '<p id="tries" class="mt-2">ПОПЫТОК: <span id="tries-left" class="font-medium text-red-600">10</span></p>';
 
   const keyboardDiv = createKeyboard();
   keyboardDiv.addEventListener("click", (event) => {
@@ -147,10 +147,10 @@ export const startGame = () => {
   // gameDiv.innerHTML += createKeyboard()
   gameDiv.insertAdjacentHTML(
     "beforeend",
-    '<button id="quit" class="button-secondary px-2 py-1 mt-4">Quit</button>'
+    '<button id="quit" class="button-secondary px-2 py-1 mt-4">Выйти</button>'
   );
   document.getElementById("quit").onclick = () => {
-    const isSure = confirm ('Are you sure you want to quit and lose progress?');
+    const isSure = confirm ('Вы уверены, что хотите выйти из игры и потерять прогресс?');
     if (isSure) {
       stopGame("quit");
     }
