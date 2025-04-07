@@ -1,4 +1,5 @@
 import '../css/style.css';
+import '../css/styles-main.css';
 import { darkModeHandle } from './utils';
 import { startGame } from './game';
 
