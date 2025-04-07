@@ -48,7 +48,7 @@
         @apply text-xl sm:text-2xl md:text-3xl font-medium;
     }
 
-    .button-primary {
+    .button-main {
         @apply  bg-[#88B75F] dark:bg-[#486D99] enabled:dark:hover:bg-indigo-600 enabled:hover:bg-slate-300 rounded-md font-bold px-7 py-4 disabled:opacity-20 disabled:cursor-not-allowed; 
        }
     .button-secondary {
