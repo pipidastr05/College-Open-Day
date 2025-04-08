@@ -51,9 +51,7 @@
     .button-main {
         @apply  bg-[#88B75F] dark:bg-[#486D99] enabled:dark:hover:bg-indigo-600 enabled:hover:bg-slate-300 rounded-md font-bold px-7 py-4 disabled:opacity-20 disabled:cursor-not-allowed; 
        }
-    .button-secondary {
-        @apply border border-black rounded-md hover:bg-slate-100 dark:border-white dark:hover:bg-zinc-600;
-      }
+  
 
      
      
@@ -117,13 +115,13 @@ body {
 
 
 
-.menu-icon {
+/* .menu-icon {
     position: absolute;
     top: 20px;
     left: 20px;
     font-size: 24px;
     cursor: pointer;
-}
+} */
 
 
 
