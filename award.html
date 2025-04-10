@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="src\css\styles-main.css" />
   </head>
 
-  <body class="h-screen flex flex-col justify-center items-center bg-[url(../images/bg-main.jpg)] bg-cover bg-center">
+  <body >
     
-     
-          <form class="justify-self-center z-3">
-            <h1 class=" justify-self-center text-center m-4" >Отлично! Ты прошел все этапы!</h1>
-            <p class="justify-self-center text-center mb-1">Заполни данные для получения сертификата:</p>
-            <div class="max-w-2xs justify-self-center text-center" id="award">
-              <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Ваша фамилия" id="familia" />
-              <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Ваше имя" id="imya" />
-              <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Ваше отчество" id="otchestvo" />
-              <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Населенный пункт" id="sity" />
-              <button id="button-award" type="button" class="m-4  bg-[#88B75F] enabled:hover:bg-slate-300 rounded-md font-bold px-7 py-4">Получить сертификат!</button>
-            </div>
-          </form>
+     <section class="h-screen flex flex-col justify-center items-center bg-[url(../images/bg-main.jpg)] bg-cover bg-center" >
+      <form class="justify-self-center z-3">
+        <h1 class=" justify-self-center text-center m-4" >Отлично! Ты прошел все этапы!</h1>
+        <p class="justify-self-center text-center mb-1">Заполни данные для получения сертификата:</p>
+        <div class="max-w-2xs justify-self-center text-center" id="award">
+          <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Ваша фамилия" id="familia" />
+          <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Ваше имя" id="imya" />
+          <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Ваше отчество" id="otchestvo" />
+          <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Населенный пункт" id="sity" />
+          <button id="button-award" type="button" class="m-4  bg-[#88B75F] enabled:hover:bg-slate-300 rounded-md font-bold px-7 py-4">Получить сертификат!</button>
+        </div>
+      </form>
+     </section>
+          
         <script type="module" src="./src/js/award.js"></script>
   </body>
 </html>
