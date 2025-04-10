@@ -14,6 +14,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'index.html'),
         hangman: path.resolve(__dirname, 'hangman-game.html'),
+        award: path.resolve(__dirname, 'award.html'),
       }
     }
   }

@@ -100,7 +100,9 @@ const stopGame = (status) => {
     //сценарий выигрыша
     document.getElementById("hangman-img").src = "images/hg-win.png";
     document.getElementById("game").innerHTML +=
-      '<h2 class="result-header win">Ты победил!</h2>';
+      `<h2 class="result-header win">Ты победил!</h2>
+      <button class="button-primary px-5 py-2 mt-5" onclick="location.href='./award.html';">Погнали дальше</button>`;
+
   } else if (status === "lose") {
     //сценарий проигрыша
     document.getElementById("game").innerHTML +=
@@ -114,7 +116,7 @@ const stopGame = (status) => {
   document.getElementById(
     "game"
   ).innerHTML += `<p>Загаданное слово: <span class="result-word">${word}</span></p>
-  <button id="play-again" class="button-primary px-5 py-2 mt-5">Начать игру</button>`;
+  <button id="play-again" class="button-primary px-5 py-2 mt-5">Играть снова</button>`;
   document.getElementById("play-again").onclick = startGame;
 };
 
@@ -157,3 +159,4 @@ export const startGame = () => {
     
   };
 };
+
