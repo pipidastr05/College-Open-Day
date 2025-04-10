@@ -13,7 +13,7 @@ export function getUserId() {
     return userId
   }
   
-  // Отправка данных о действиях
+  // Отправка данных о действиях на главной
   async function trackVisit(userId, main) {
     console.log('Отправка данных в Supabase:', userId, main) // Добавь эту строку
     
@@ -29,5 +29,20 @@ export function getUserId() {
   }
   
   // Вызов при загрузке страницы
-  getUserId()
+  // getUserId()
   
+
+  //Начал играть в виселицу
+  async function trackVisitHang(userId, hangman) {
+    console.log('Отправка данных в Supabase:', userId, hangman) // Добавь эту строку
+    
+    const { data, error } = await supabase
+      .from('college-open-day')
+      .insert([{ id: userId, hangman }])
+    
+    if (error) {
+      console.error('Ошибка при сохранении:', error)
+    } else {
+      console.log('Сохранено:', data)
+    }
+  }

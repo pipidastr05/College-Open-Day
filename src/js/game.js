@@ -101,7 +101,7 @@ const stopGame = (status) => {
     document.getElementById("hangman-img").src = "images/hg-win.png";
     document.getElementById("game").innerHTML +=
       `<h2 class="result-header win">Ты победил!</h2>
-      <button class="button-primary px-5 py-2 mt-5" onclick="location.href='./award.html';">Погнали дальше</button>`;
+      <button class="button-primary px-5 py-2 mt-5" onclick="location.href='./nowel.html';">Погнали дальше</button>`;
 
   } else if (status === "lose") {
     //сценарий проигрыша
@@ -159,4 +159,26 @@ export const startGame = () => {
     
   };
 };
+
+
+
+// import { supabase } from './supabaseClient';
+// import { getUserId } from './statistic.js';
+
+// async function trackStep(stepName) {
+//   const userId = getUserId();
+//   const { data, error } = await supabase
+//     .from('college-open-day')
+//     .update({ [stepName]: 'visit' }) // динамически: 'hangman' или 'novel'
+//     .eq('id', userId);
+
+//   if (error) {
+//     console.error(`Ошибка при обновлении шага "${stepName}":`, error);
+//   } else {
+//     console.log(`Пользователь зашёл на модуль: ${stepName}`);
+//   }
+// }
+
+// // Вызови эту функцию при загрузке страницы
+// trackStep('hangman');
 
