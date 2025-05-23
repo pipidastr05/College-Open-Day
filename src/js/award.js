@@ -1,3 +1,5 @@
+import '../css/style.css';
+import '../css/styles-main.css';
 import { jsPDF } from "jspdf";
 
 

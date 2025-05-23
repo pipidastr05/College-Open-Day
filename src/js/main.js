@@ -4,7 +4,7 @@ import '../css/styles-main.css';
 import { darkModeHandle } from './utils';
 import { startGame } from './game';
 import { getUserId } from './statistic';
-import { jsPDF } from "jspdf";
+
 
 
 
