@@ -101,7 +101,8 @@ const stopGame = (status) => {
     document.getElementById("hangman-img").src = "images/hg-win.png";
     document.getElementById("game").innerHTML +=
       `<h2 class="result-header win">Ты победил!</h2>
-      <button class="button-primary px-5 py-2 mt-5" onclick="location.href='./nowel.html';">Погнали дальше</button>`;
+      <button class="button-primary px-5 py-2 mt-5" onclick="location.href='https://sites.google.com/view/crit-dev-helper/%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D1%82%D1%83%D1%80';">Погнали дальше</button>
+      <button class="button-primary px-5 py-2 mt-5" onclick="location.href='./test.html';">Костыль</button>`;
 
   } else if (status === "lose") {
     //сценарий проигрыша

@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="src\css\styles-main.css" />
   </head>
 
+  <body>
+    <section class="h-screen flex flex-col justify-center items-center bg-[url(../images/bg-main.jpg)] bg-cover bg-center" >
+      <form class="justify-self-center z-3">
+        <h1 class=" justify-self-center text-center m-4" >Отлично! Ты прошел все этапы!</h1>
+        <p class="justify-self-center text-center mb-1">Заполни данные для получения сертификата:</p>
+        <div class="max-w-2xs justify-self-center text-center" id="award">
+          <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Ваша фамилия" id="familia" />
+          <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Ваше имя" id="imya" />
+          <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Ваше отчество" id="otchestvo" />
+          <input class="border-solid border-[#88B75F] border-2 p-1 rounded w-71 m-1" type="text" placeholder="Населенный пункт" id="sity" />
+          <button id="button-award" type="button" class="m-4  bg-[#88B75F] enabled:hover:bg-slate-300 rounded-md font-bold px-7 py-4">Получить сертификат!</button>
+        </div>
+      </form>
+     </section>
+        <!-- <div class="container">
+          <form>
+            <h2>Отлично! Ты прошел все этапы!</h2>
+            <p>
+              Заполни данные для получения сертификата:
+            </p>
+            <div class="award-form" id="award">
+              <input type="text" placeholder="Ваша фамилия" id="familia" />
+              <input type="text" placeholder="Ваше имя" id="imya" />
+              <input type="text" placeholder="Ваше отчество" id="otchestvo" />
+              <button id="button-award" type="button">Получить сертификат</button>
+            </div>
+          </form>
+        </div> -->
+        <script type="module" src="./src/js/award.js"></script>
+  </body>
+</html>
+
+<!-- ЭТО ПОСЛЕДНЯЯ СТИЛИЗОВАННАЯ ВЕРСИЯ -->
+
+<!-- <!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Награждение</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src\css\styles-main.css" />
+  </head>
+
   <body >
     
      <section class="h-screen flex flex-col justify-center items-center bg-[url(../images/bg-main.jpg)] bg-cover bg-center" >
@@ -25,5 +68,67 @@
           
         <script type="module" src="./src/js/award.js"></script>
         <script type="module" src="./src/js/main.js"></script>
+
+
+Тут начинается ненужный скрипт
+        <script>
+          import { jsPDF } from "jspdf";
+
+          const getSert = document.getElementById('button-award');
+          getSert.addEventListener('click', async function (e) {
+            e.preventDefault();
+            await award();
+            });
+
+
+          async function award() {
+           // Получаем значения из полей
+            const lastName = document.getElementById('familia').value.trim();
+            const firstName = document.getElementById('imya').value.trim();
+            const middleName = document.getElementById('otchestvo').value.trim();
+
+            // Объединяем в одну строку и переводим в ВЕРХНИЙ РЕГИСТР
+            const fullName = `${lastName} ${firstName} ${middleName}`.toUpperCase();
+ 
+
+  
+            const doc = new jsPDF({ orientation: "landscape",
+            unit: "mm",
+            format: [297, 229.5],});
+  
+
+            // Загрузка TTF-шрифта как ArrayBuffer
+            const fontResponse = await fetch("./fonts/ofont.ru_Uncage.ttf");
+            const fontData = await fontResponse.arrayBuffer();
+ 
+            // Преобразуем в base64
+              const base64Font = btoa(
+             String.fromCharCode(...new Uint8Array(fontData))
+            );
+ 
+            // Добавим шрифт во внутреннее хранилище jsPDF
+            doc.addFileToVFS("ofont.ru_Uncage.ttf", base64Font);
+            doc.addFont("ofont.ru_Uncage.ttf", "uncage", "normal");
+            doc.setFont("uncage");
+
+            // Добавление изображения (шаблона сертификата)
+            const img = new Image();
+            img.src = "./images/sertificat.png";
+
+            img.onload = function () {
+    
+            // doc.addFont('./fonts/georama/georama_ru-normal.ttf','georama_ru', 'normal');
+            // doc.setFont('georama_ru-normal', 'normal');
+    
+            doc.setFontSize(22);
+            doc.addImage(img, "PNG", 0, 0, 297, 229.5); // форма сертификата - 2000 х 1545
+            doc.text(fullName, 60, 105); // Пишем ФИО на фоне
+            doc.save(`${fullName}_сертификат.pdf`);
+            };
+          }
+        </script> 
+Тут закончился ненужный скрипт
+
+
   </body>
-</html>
+</html> -->
